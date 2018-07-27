@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/**
+ * 共通定義（定数・mixin）
+ */
+/* フォントサイズ調整用 */
+/* センタリングした背景を設定 */
+/* メインページの見出しデザイン */
+/* サイドメニューの見出しデザイン */
+#main {
+  overflow: hidden;
+}
+
+#top-banner .owl-theme .owl-dots {
+  text-align: left;
+}
+#top-banner .owl-theme .owl-dots .owl-dot {
+  outline: 0;
+  border: none;
+}
+#top-banner .owl-theme .owl-dots .owl-dot span {
+  background: #aaa;
+  border-radius: 0;
+  width: 25px;
+  height: 2px;
+  margin: 2px 10px 4px 0;
+}
+#top-banner .owl-theme .owl-dots .owl-dot.active span, #top-banner .owl-theme .owl-dots .owl-dot:hover span {
+  background: #9d1a2d;
+}
+
+#top-new-items .main-title {
+  margin: 20px auto 20px;
+  text-align: center;
+}
+#top-new-items .main-title img {
+  max-width: 100%;
+}
+@media (min-width: 641px) {
+  #top-new-items .main-title {
+    display: block;
+    content: "";
+    background-image: url("../images/top/title_newitems.png");
+    background-position: center center;
+    width: 100%;
+    height: 15px;
+  }
+  #top-new-items .main-title img {
+    display: none;
+  }
+}
+
+#top-popular-items .main-title {
+  margin: 20px auto 20px;
+  text-align: center;
+}
+#top-popular-items .main-title img {
+  max-width: 100%;
+}
+@media (min-width: 641px) {
+  #top-popular-items .main-title {
+    display: block;
+    content: "";
+    background-image: url("../images/top/title_popular.png");
+    background-position: center center;
+    width: 100%;
+    height: 15px;
+  }
+  #top-popular-items .main-title img {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

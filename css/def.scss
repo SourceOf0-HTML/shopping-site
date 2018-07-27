@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+
+/**
+ * 共通定義（定数・mixin）
+ */
+
+$responsive_max_size: 640px;
+$responsive_min_size: $responsive_max_size + 1px;
+$wapper_padding_w: 12px;
+
+$ja_font: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+
+$base_color: #f9f8f6;
+$sub_color: #e2ddd4;
+$info_color: #887f69;
+$accent_color: #9d1a2d;
+
+$sub_bg_color: #ffffff;
+$border_color: #e3e8cf;
+$box_border_color: #e8e4da;
+
+
+/* フォントサイズ調整用 */
+@mixin fontsize($size: 24, $base: 10) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+/* センタリングした背景を設定 */
+@mixin centeringBg($url) {
+  display: block;
+  content: "";
+  background-image: url($url);
+  background-position: center center;
+}
+
+/* メインページの見出しデザイン */
+@mixin mainHead($url, $bg_height) {
+  .main-title {
+    margin: 20px auto 20px;
+    text-align: center;
+    
+    img {
+      max-width: 100%;
+    }
+  }
+  
+  @media (min-width: $responsive_min_size) {
+    .main-title {
+      img {
+        display: none;
+      }
+      @include centeringBg($url);
+      width: 100%;
+      height: $bg_height;
+    }
+  } // min-width
+}
+
+/* サイドメニューの見出しデザイン */
+@mixin sideInfoHead {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $info_color;
+  padding-left: 1.6em;
+}

@@ -1,0 +1,255 @@
+@charset "UTF-8";
+/**
+ * 共通定義（定数・mixin）
+ */
+/* フォントサイズ調整用 */
+/* センタリングした背景を設定 */
+/* メインページの見出しデザイン */
+/* サイドメニューの見出しデザイン */
+#items-info {
+  background: white;
+  padding: 30px 12px;
+  position: relative;
+  left: -12px;
+  width: 100vw;
+  margin: 12px 0 30px;
+}
+@media (min-width: 641px) {
+  #items-info {
+    left: 0;
+    width: auto;
+    padding: 30px 10% 60px;
+  }
+}
+#items-info .item-name {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+@media (min-width: 641px) {
+  #items-info .item-name {
+    display: inline;
+  }
+}
+#items-info .item-code {
+  display: inline-block;
+  font-size: 10px;
+  font-size: 1rem;
+  color: #a6a6a6;
+  margin: 0.6em 0;
+}
+#items-info table {
+  font-size: 12px;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  line-height: 1.6em;
+  color: #887f69;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+#items-info table tr, #items-info table th, #items-info table td {
+  vertical-align: middle;
+  padding: 1em;
+  border: 2px solid #e8e4da;
+}
+#items-info table th {
+  width: 30%;
+  background: #f9f9f5;
+}
+
+#item-images {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 10px 0 0;
+  padding: 10px 0;
+  border-top: 1px solid #e3e8cf;
+}
+@media (min-width: 641px) {
+  #item-images {
+    flex-direction: row;
+  }
+}
+#item-images #display_img {
+  flex: 1;
+}
+#item-images #display_img img {
+  width: 100%;
+}
+#item-images ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 6px auto 0;
+}
+@media (min-width: 641px) {
+  #item-images ul {
+    width: 28%;
+    margin: auto auto auto 1%;
+  }
+}
+#item-images ul li {
+  list-style: none;
+  display: inline-block;
+  width: 19%;
+  margin-bottom: 1%;
+}
+@media (min-width: 641px) {
+  #item-images ul li {
+    width: 49%;
+  }
+}
+#item-images ul li img {
+  width: 100%;
+  cursor: pointer;
+}
+
+@media (min-width: 641px) {
+  #item-form {
+    border-bottom: 1px solid #e3e8cf;
+  }
+}
+#item-form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#item-form fieldset {
+  margin: 0;
+  padding: 20px 0;
+  border-top: 1px solid #e3e8cf;
+}
+#item-form fieldset:last-child {
+  border-bottom: 1px solid #e3e8cf;
+}
+@media (min-width: 641px) {
+  #item-form fieldset:last-child {
+    border-bottom: none;
+  }
+}
+#item-form fieldset .form-label {
+  margin-bottom: 16px;
+}
+#item-form .item-section {
+  width: 100%;
+}
+@media (min-width: 641px) {
+  #item-form .item-section {
+    width: 60%;
+  }
+}
+#item-form .item-price {
+  position: relative;
+}
+#item-form .item-price p {
+  position: absolute;
+  left: 40%;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-style: italic;
+  letter-spacing: -0.05em;
+  top: 16px;
+}
+#item-form .item-price p strong {
+  color: #e80f66;
+}
+#item-form .item-price p .price-result {
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+#item-form .item-quantity {
+  position: relative;
+}
+#item-form .item-quantity p {
+  position: absolute;
+  left: 40%;
+  top: 10px;
+}
+#item-form .item-quantity input {
+  width: 80%;
+  height: 38px;
+  background: none;
+  outline: 0;
+  border: 2px solid #e8e4da;
+  text-align: center;
+}
+#item-form button {
+  background: none;
+  border: none;
+  outline: 0;
+  margin: 10px auto;
+  padding: 2%;
+  height: 100%;
+}
+#item-form button img {
+  width: 100%;
+}
+@media (min-width: 641px) {
+  #item-form button {
+    margin: 0;
+    padding: 0 0 0 5%;
+    flex: 1;
+  }
+}
+
+#item-explanation .head, #item-explanation .title {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #887f69;
+  font-weight: bold;
+  line-height: 1.4em;
+  letter-spacing: 0.05em;
+  padding: 12px 0;
+}
+@media (min-width: 641px) {
+  #item-explanation .head, #item-explanation .title {
+    font-size: 14px;
+    font-size: 1.4rem;
+    padding: 24px 0 12px;
+  }
+}
+#item-explanation .head {
+  border-bottom: 2px solid #887f69;
+}
+#item-explanation .title:before {
+  display: inline-block;
+  background: #887f69;
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: 0.2em;
+}
+#item-explanation p {
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.4em;
+  letter-spacing: 0.05em;
+  margin: 10px 0 20px;
+}
+
+#latest-watched-items .main-title {
+  margin: 20px auto 20px;
+  text-align: center;
+}
+#latest-watched-items .main-title img {
+  max-width: 100%;
+}
+@media (min-width: 641px) {
+  #latest-watched-items .main-title {
+    display: block;
+    content: "";
+    background-image: url("../images/list/recent_pro_pc.png");
+    background-position: center center;
+    width: 100%;
+    height: 17px;
+  }
+  #latest-watched-items .main-title img {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=products.css.map */

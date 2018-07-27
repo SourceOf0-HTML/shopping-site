@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+@import "def";
+
+
+#main {
+  overflow: hidden;
+}
+
+
+#top-banner {
+  .owl-theme {
+    .owl-dots {
+      text-align: left;
+      
+      .owl-dot {
+        outline: 0;
+        border: none;
+        
+        span {
+          background: #aaa;
+          border-radius: 0;
+          width: 25px;
+          height: 2px;
+          margin: 2px 10px 4px 0;
+        }
+        
+        &.active span, &:hover span {
+          background: $accent_color;
+        }
+      }
+    } // .owl-dots
+  } // .owl-theme
+} // #top-banner
+
+
+#top-new-items {
+  @include mainHead("../images/top/title_newitems.png", 15px);
+}
+
+#top-popular-items {
+  @include mainHead("../images/top/title_popular.png", 15px);
+}

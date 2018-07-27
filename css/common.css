@@ -1,0 +1,465 @@
+@charset "UTF-8";
+/**
+ * 共通定義（定数・mixin）
+ */
+/* フォントサイズ調整用 */
+/* センタリングした背景を設定 */
+/* メインページの見出しデザイン */
+/* サイドメニューの見出しデザイン */
+/**
+ * 共有定義
+ */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a:link, a:visited, a:hover {
+  text-decoration: none;
+}
+a img {
+  border-width: 0px;
+  border-style: none;
+  background: transparent;
+}
+
+.clearfix, #side-menu .sub-info {
+  *zoom: 1;
+}
+.clearfix:after, #side-menu .sub-info:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.sr-only {
+  display: none;
+}
+
+.item-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.item-list ul li {
+  width: 49.5%;
+  margin-bottom: 4px;
+  padding: 6px 6px 16px;
+  background: white;
+}
+@media (min-width: 641px) {
+  .item-list ul li {
+    width: 32.8%;
+  }
+}
+.item-list ul a {
+  font-size: 11px;
+  font-size: 1.1rem;
+  color: black;
+}
+.item-list ul a img {
+  width: 100%;
+}
+.item-list ul a .item-name {
+  margin: 6px 0 10px;
+  line-height: 1.3em;
+  letter-spacing: 0.07em;
+}
+.item-list ul a p {
+  margin: 6px 0 10px;
+}
+
+@media (max-width: 640px) {
+  .pc {
+    display: none;
+  }
+}
+@media (min-width: 641px) {
+  .sp {
+    display: none;
+  }
+}
+/**
+ * 共通レイアウト
+ */
+body {
+  background: #f9f8f6;
+  width: 100%;
+}
+
+#wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 20px 12px 92px;
+}
+@media (min-width: 641px) {
+  #wrapper {
+    max-width: 940px;
+  }
+}
+
+#header {
+  width: 100%;
+}
+#header a {
+  display: inline-block;
+}
+#header .menu-icon {
+  margin: 8px 4px 0;
+}
+#header #sp-main-nav {
+  font-size: 15px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#header #sp-main-nav div {
+  margin-bottom: 4px;
+}
+#header #sp-main-nav ul {
+  display: none;
+  width: 100vw;
+  background: #ff6d77;
+  padding: 1em;
+}
+#header #sp-main-nav ul li {
+  border-bottom: 1px solid white;
+}
+#header #sp-main-nav ul li:last-child {
+  border-bottom: none;
+}
+#header #sp-main-nav ul li a {
+  width: 100%;
+  padding: .8em .6em .9em;
+  color: white;
+}
+#header #pc-main-nav {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 40px 0;
+}
+#header #pc-main-nav .nav-logo {
+  position: absolute;
+  left: 0;
+}
+#header #pc-main-nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+#header #pc-main-nav ul li {
+  margin: 0 10px;
+}
+@media (min-width: 641px) {
+  #header {
+    width: 100%;
+  }
+}
+
+#content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#main {
+  flex: 1;
+  max-width: 100%;
+}
+#main #breadcrumb {
+  width: 100%;
+  background: #e8e4da;
+  padding: 10px 4px;
+  border-radius: 2px;
+}
+#main #breadcrumb ul li {
+  display: inline-block;
+  color: #887f69;
+}
+#main #breadcrumb ul li:first-child a:before {
+  position: relative;
+  top: .1em;
+  content: url("../images/list/home_icon.png");
+  margin-right: .8em;
+}
+#main #breadcrumb ul li:not(:first-child):before {
+  content: "/";
+}
+#main #breadcrumb ul li a {
+  font-size: 11px;
+  font-size: 1.1rem;
+  color: #887f69;
+  padding: 0 .4em 0 .8em;
+}
+
+#shopping-guide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#shopping-guide .main-title {
+  margin: 20px auto 20px;
+  text-align: center;
+}
+#shopping-guide .main-title img {
+  max-width: 100%;
+}
+@media (min-width: 641px) {
+  #shopping-guide .main-title {
+    display: block;
+    content: "";
+    background-image: url("../images/top/title_guide.png");
+    background-position: center center;
+    width: 100%;
+    height: 15px;
+  }
+  #shopping-guide .main-title img {
+    display: none;
+  }
+}
+#shopping-guide .main-title {
+  width: 100%;
+}
+#shopping-guide .guide {
+  display: inline-block;
+  width: 100%;
+  background: white;
+  margin-bottom: 6px;
+  padding: 10px 22px;
+}
+#shopping-guide .guide .guide-title {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #887f69;
+  font-weight: bold;
+  margin: 10px 0;
+}
+#shopping-guide .guide .guide-section {
+  margin: 10px 0 20px;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+#shopping-guide .guide .guide-section img {
+  max-width: 100%;
+}
+#shopping-guide .guide .guide-section .guide-head {
+  color: #887f69;
+  font-weight: bold;
+}
+#shopping-guide .guide .guide-section .guide-head:before {
+  display: inline-block;
+  background: #887f69;
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: 0.2em;
+}
+#shopping-guide .guide .guide-section p {
+  margin: 10px 0;
+  line-height: 1.6em;
+}
+@media (min-width: 641px) {
+  #shopping-guide .guide {
+    width: 49.5%;
+  }
+}
+
+@media (min-width: 641px) {
+  #side-menu {
+    width: 220px;
+    margin-left: 16px;
+  }
+}
+#side-menu .search-form {
+  height: 68px;
+  padding: 20px 16px;
+  margin: 14px 0;
+  position: relative;
+  background: white;
+}
+#side-menu .search-form input {
+  font-size: 11px;
+  font-size: 1.1rem;
+  left: 0;
+  top: 0;
+  outline: 0;
+  padding: 8px 10px;
+  width: 100%;
+  background: #eee;
+  border: none;
+  font-style: italic;
+}
+#side-menu .search-form button {
+  position: absolute;
+  right: 16px;
+  top: 26px;
+  background: none;
+  border: none;
+  outline: 0;
+}
+@media (min-width: 641px) {
+  #side-menu .search-form {
+    height: 98px;
+    margin: 0;
+  }
+  #side-menu .search-form label {
+    display: block;
+    margin: 0 0 10px;
+  }
+  #side-menu .search-form button {
+    top: 48px;
+  }
+}
+#side-menu .sub-menu {
+  font-size: 12px;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+#side-menu .sub-menu .sub-menu-title {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #887f69;
+  padding-left: 1.6em;
+}
+#side-menu .sub-menu .sub-menu-title:before {
+  position: absolute;
+  background: url(../images/top/down_icon.png);
+  content: "";
+}
+#side-menu .sub-menu .sub-menu-title:after {
+  margin-right: 1em;
+  content: url(../images/top/next_icon.png);
+}
+#side-menu .sub-menu ul {
+  flex-direction: column;
+}
+#side-menu .sub-menu ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  margin-bottom: 0;
+  width: 100%;
+  padding-left: 1.6em;
+  color: black;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+}
+#side-menu .sub-menu ul li a:after {
+  margin-right: 1em;
+  content: url(../images/top/next_icon_gray.png);
+}
+#side-menu .sub-menu.open .sub-menu-title:after {
+  content: url(../images/top/down_icon.png);
+}
+#side-menu .sub-menu.open ul a {
+  margin-bottom: 2px;
+  height: 45px;
+  opacity: 1;
+}
+#side-menu .sub-info {
+  background: white;
+  margin: 10px 0;
+}
+#side-menu .sub-info .sub-info-title {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #887f69;
+  padding-left: 1.6em;
+}
+#side-menu .sub-info .sub-info-img {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+#side-menu .sub-info .sub-info-section {
+  float: right;
+  width: 50%;
+  padding: 10px 10px 10px 0;
+}
+#side-menu .sub-info .sub-info-section p {
+  font-size: 11px;
+  font-size: 1.1rem;
+  line-height: 1.6em;
+  letter-spacing: 0.1em;
+  padding-bottom: 10px;
+}
+@media (min-width: 641px) {
+  #side-menu .sub-info .sub-info-img {
+    float: none;
+    width: 100%;
+  }
+  #side-menu .sub-info .sub-info-section {
+    float: none;
+    width: 100%;
+    padding: 0 10px 10px 10px;
+  }
+  #side-menu .sub-info .sub-info-section p {
+    width: 100%;
+  }
+  #side-menu .sub-info .sub-info-section .button {
+    display: block;
+    margin: 6px auto 10px;
+    width: 101px;
+  }
+}
+
+#footer {
+  width: 100%;
+  text-align: center;
+}
+#footer .page-top {
+  display: inline-block;
+  padding: 10px 0 20px;
+}
+@media (min-width: 641px) {
+  #footer {
+    text-align: right;
+  }
+  #footer .page-top {
+    position: relative;
+    right: 0;
+  }
+}
+#footer .footer-menu {
+  border-top: 1px solid #887f69;
+  text-align: center;
+}
+#footer .footer-menu ul {
+  margin: 20px 14px;
+}
+#footer .footer-menu ul li {
+  display: inline-block;
+}
+#footer .footer-menu ul li:not(:first-child):before {
+  content: "・";
+  margin-right: 0.4em;
+}
+#footer .footer-menu ul li a {
+  font-size: 11px;
+  font-size: 1.1rem;
+  color: black;
+  line-height: 1.6em;
+  letter-spacing: 0.1em;
+}
+#footer .copy {
+  text-align: center;
+  color: #b8b4ac;
+}
+
+/*# sourceMappingURL=common.css.map */

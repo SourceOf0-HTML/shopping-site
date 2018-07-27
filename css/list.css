@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/**
+ * 共通定義（定数・mixin）
+ */
+/* フォントサイズ調整用 */
+/* センタリングした背景を設定 */
+/* メインページの見出しデザイン */
+/* サイドメニューの見出しデザイン */
+#category-items .main-title {
+  margin: 20px auto 20px;
+  text-align: center;
+}
+#category-items .main-title img {
+  max-width: 100%;
+}
+@media (min-width: 641px) {
+  #category-items .main-title {
+    display: block;
+    content: "";
+    background-image: url("../images/list/cate_image.jpg");
+    background-position: center center;
+    width: 100%;
+    height: 170px;
+  }
+  #category-items .main-title img {
+    display: none;
+  }
+}
+#category-items .main-title {
+  margin: 10px auto 10px;
+  background-position: left center;
+}
+
+#latest-watched-items .main-title {
+  margin: 20px auto 20px;
+  text-align: center;
+}
+#latest-watched-items .main-title img {
+  max-width: 100%;
+}
+@media (min-width: 641px) {
+  #latest-watched-items .main-title {
+    display: block;
+    content: "";
+    background-image: url("../images/list/recent_pro_pc.png");
+    background-position: center center;
+    width: 100%;
+    height: 17px;
+  }
+  #latest-watched-items .main-title img {
+    display: none;
+  }
+}
+
+#main .pager {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 30px;
+}
+#main .pager li {
+  background: #887f69;
+  width: 120px;
+  padding: 10px 0;
+  text-align: center;
+}
+#main .pager li a {
+  font-size: 14px;
+  font-size: 1.4rem;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+/*# sourceMappingURL=list.css.map */

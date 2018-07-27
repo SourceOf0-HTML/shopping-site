@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+@import "def";
+
+#category-items {
+  @include mainHead("../images/list/cate_image.jpg", 170px);
+  
+  .main-title {
+    margin: 10px auto 10px;
+    background-position: left center;
+  }
+}
+
+#latest-watched-items {
+  @include mainHead("../images/list/recent_pro_pc.png", 17px);
+}
+
+#main {
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 30px;
+    
+    li {
+      background: $info-color;
+      width: 120px;
+      padding: 10px 0;
+      text-align: center;
+      
+      a {
+        @include fontsize(14);
+        color: white;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+}
